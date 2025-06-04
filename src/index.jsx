@@ -50,7 +50,7 @@ class LinesEllipsis extends React.Component {
     if (prevProps.winWidth !== this.props.winWidth) {
       this.copyStyleToCanvas()
     }
-    if (this.props !== prevProps) {
+    if (JSON.stringify(this.props) !== JSON.stringify(prevProps)) {
       this.reflow(this.props)
     }
   }
